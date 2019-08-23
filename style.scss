@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('https://dummyimage.s3.eu-central-1.amazonaws.com/manrope-regular-webfont.woff2') format('woff2'),
+       url('https://dummyimage.s3.eu-central-1.amazonaws.com/manrope-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$tab-color: #FFFFFF;
+$active-color: #4563F3;
+$inactive-color: #BBC3CC;
+
+$background-color: #DDE1E5;
+$shadow-color: darken($background-color, 15%);
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $background-color;
+
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  color: $inactive-color;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  background-color: $tab-color;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px -15px rgba($shadow-color, .5);
+
+  padding: 0 30px;
+  width: 40%;
+  min-width: 320px;
+  max-width: 587px;
+  max-height: 133px;
+
+  @media (min-width: 800px) {
+    border-radius: 20px;
+  }
+
+  &__bar {
+    position: absolute;
+    left: 0;
+    width: 45px;
+    height: 4px;
+    background-color: $active-color;
+    z-index: 9999;
+    display: block;
+    border-radius: 30px;
+
+    @media (min-width: 800px) {
+      width: 50px;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    max-height: 100%;
+    margin: 15px 0;
+  }
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 100%;
+
+    * {
+      pointer-events: none;
+    }
+  }
+
+  &__icon {
+    width: 40%;
+    max-height: 50px;
+  }
+
+  &__icon path {
+    fill: $inactive-color;
+    transition: fill .5s ease-in-out;
+  }
+
+  &__label {
+    margin: 10% 0 0 0;
+    color: $inactive-color;
+    font-size: 15px;
+    transition: color .3s .15s ease-out;
+  }
+
+  &__item--active path {
+    fill: $active-color;
+  }
+
+  &__item--active &__label {
+    color: $active-color;
+  }
+
+}
+

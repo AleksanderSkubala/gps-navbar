@@ -1,0 +1,5 @@
+<svg version="1.1" class="nav__icon" id="browse-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+  <path class="st0" d="M16,1.6C8,1.6,1.6,8,1.6,16S8,30.4,16,30.4S30.4,24,30.4,16S24,1.6,16,1.6z M16,5.2c4.7,0,8.6,3,10.1,7.2H5.9
+  C7.4,8.2,11.3,5.2,16,5.2z M5.2,16c4.9,0,8.9,4.7,9,10.6C9.1,25.7,5.2,21.3,5.2,16z M17.8,26.6c0.1-5.9,4.1-10.6,9-10.6
+  C26.8,21.3,22.9,25.7,17.8,26.6z"/>
+</svg>
